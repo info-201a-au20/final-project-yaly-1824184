@@ -1,14 +1,10 @@
 # Final Project
 
 
-<<<<<<< HEAD
-=======
-
 Domain of interest: **Entertainment**
->>>>>>> d613e41afa0c61e9ba244128469fcb37613df822
 
 
-=======
+
 https://medium.com/datadriveninvestor/data-science-analysis-of-movies-released-in-the-cinema-between-2000-and-2017-b2d9e515d032
 This project analyzes movies released in theaters from 2000-2017 from an IMDB dataset. Some conclusions drawn from the analysis are movies between 1-2h30 make the most money, critics rate harsher than the public, and movies with good reviews made the most money.
 
@@ -46,11 +42,22 @@ or
 
 
 What questions (from above) can be answered using the data in this dataset(**1 point**)?
->>>>>>> d613e41afa0c61e9ba244128469fcb37613df822
+
 
 ## Data Source - American Ninja Warrior
 
-<<<<<<< HEAD
-One of the data sources we found contains information on the popular competition show American Ninja Warrior. In this show, people try their hand at an obstacle course that tests your physical strength. This dataset has a record of every obstacle at every competition the show has held from seasons 1-10. This data source can be found [here](#https://data.world/ninja/anw-obstacle-history). The data in this dataset comes from a Sasuke (the original Ninja Warrior competition from Japan) fandom that keeps track of the obstacles at every American Ninja Warrior competition from seasons 1 through 10. Members of the fandom update the data after every episode after seeing which obstacles are used. There are 889 observations and 5 features in the data. We can answer many questions from this dataset all pertaining to the show. Some of these questions include:
-* 
-* 
+
+Link to URL where data is from, and download the data into the project repo in a `data/` folder?
+- One of the data sources we found contains information on the popular competition show American Ninja Warrior. In this show, people try their hand at an obstacle course that tests your physical strength. This dataset has a record of every obstacle at every competition the show has held from seasons 1-10. This data source can be found [here](#https://data.world/ninja/anw-obstacle-history).
+
+Description of how was the data collected or generated?
+- The data in this dataset comes from a Sasuke (the original Ninja Warrior competition from Japan) fandom that keeps track of the obstacles at every American Ninja Warrior competition from seasons 1 through 10. Members of the fandom update the data after every episode after seeing which obstacles are used.
+
+How many observations (rows) and features (columns) are in your data?
+- There are 889 observations and 5 features in the data.
+
+
+What questions (from above) can be answered using the data in this dataset?
+- How does a type of entertainment keep audiences engaged? _**Changing seasons, new cast, how often?**_
+-- We can answer the above question by looking at how changing challenges and repeating 
+   popular ones keeps people entertained.

@@ -19,7 +19,7 @@ This website shows the most popular global sports based on amount of coverage fr
 
 What characteristics of a video make is go viral? Analysis of viral videos to compare length, titles, title length, genre, language, etc.
 
-How does a type of entertainment keep audiences engaged? _**Changing seasons, new cast, how often?**_
+How does a type of entertainment keep audiences engaged? Changing seasons, new cast, how often, adding challenges?
 
 What type of entertainment is most popular from over the years? Comparison of money involved or amount of time people spend on a certain type etc.
 
@@ -66,5 +66,3 @@ What questions (from above) can be answered using the data in this dataset(**1 p
 
 
 One of the data sources we found contains information on the popular competition show American Ninja Warrior. In this show, people try their hand at an obstacle course that tests your physical strength. This dataset has a record of every obstacle at every competition the show has held from seasons 1-10. This data source can be found [here](https://data.world/ninja/anw-obstacle-history). The data in this dataset comes from a Sasuke (the original Ninja Warrior competition from Japan) fandom that keeps track of the obstacles at every American Ninja Warrior competition from seasons 1 through 10. Members of the fandom update the data after every episode after seeing which obstacles are used. There are 889 observations and 5 features in the data. We can answer many questions from this dataset all pertaining to the show. Some of these questions include:
-
-https://data.world/ninja/anw-obstacle-history

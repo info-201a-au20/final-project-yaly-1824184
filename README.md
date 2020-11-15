@@ -19,7 +19,7 @@ This website shows the most popular global sports based on amount of coverage fr
 
 What characteristics of a video make it go viral? Analysis of viral videos to compare length, titles, title length, genre, language, etc.
 
-How does a type of entertainment keep audiences engaged? _**Changing seasons, new cast, how often?**_
+How does a type of entertainment keep audiences engaged? Changing seasons, new cast, how often, adding challenges?
 
 What type of entertainment is most popular from over the years? Comparison of money involved or amount of time people spend on a certain type etc.
 
@@ -41,32 +41,60 @@ What type of entertainment is most popular from over the years? Comparison of mo
 
 - What questions (from above) can be answered using the data in this dataset (**1 point**)?
 
+<<<<<<< HEAD
 - *Questions such as (What characteristics of a video make is go viral? and (What type of entertainment is most popular from over the years?) can be answered by using this dataset*
 
 ## Finding Data (**15 points**, 5 points each)
+=======
+## Data Source - Netflix Movies and TV Shows
+>>>>>>> d5909f161c9dbd32d6e8658d34f44a721d0808c8
 For each identified data source,
-Link to URL where data is from, and download the data into the project repo in a `data/` folder (**1 point**)?
+Link to URL where data is from, and download the data into the project repo in a `data/` folder
 - https://www.kaggle.com/rounakbanik/the-movies-dataset?select=credits.csv
+
+Description of how was the data collected or generated?
+- This dataset includes tv shows and movies available on Netflix as of 2019. The dataset is collected from Flixable which is a third-party Netflix search engine.
+- How does a type of entertainment keep audiences engaged? _**Changing seasons, new cast, how often?**_
+
+How many observations (rows) and features (columns) are in your data?
+- 6234 rows
+- 12 columns
+
+
+What questions (from above) can be answered using the data in this dataset?
+- What characteristics of a video make is go viral? Analysis of viral videos to compare length, titles, title length, genre, language, etc.
+
+## Data Source - Disney Movies
+For each identified data source,
+Link to URL where data is from, and download the data into the project repo in a `data/` folder
 
 - https://www.kaggle.com/prateekmaj21/disney-movies
 
-Description of how was the data collected or generated (**1 point**)?
-- This dataset includes tv shows and movies available on Netflix as of 2019. The dataset is collected from Flixable which is a third-party Netflix search engine.
+Description of how was the data collected or generated?
 - This data set includes all Disney movies up to 2017. It has their release dates, genre, rating, total gross and inflation adjusted gross(2016).
 
-How many observations (rows) and features (columns) are in your data(**1 point**)?
-- 6234 rows
-- 12 columns
-or
+How many observations (rows) and features (columns) are in your data?
 - 579 rows
 - 6 columns
 
 
-What questions (from above) can be answered using the data in this dataset(**1 point**)?
+What questions (from above) can be answered using the data in this dataset?
+- What type of entertainment is most popular from over the years? Comparison of money involved or amount of time people spend on a certain type etc.
+
 
 ## Data Source - American Ninja Warrior
 
+Link to URL where data is from, and download the data into the project repo in a `data/` folder?
+- One of the data sources we found contains information on the popular competition show American Ninja Warrior. In this show, people try their hand at an obstacle course that tests your physical strength. This dataset has a record of every obstacle at every competition the show has held from seasons 1-10. This data source can be found [here](#https://data.world/ninja/anw-obstacle-history).
 
-One of the data sources we found contains information on the popular competition show American Ninja Warrior. In this show, people try their hand at an obstacle course that tests your physical strength. This dataset has a record of every obstacle at every competition the show has held from seasons 1-10. This data source can be found [here](https://data.world/ninja/anw-obstacle-history). The data in this dataset comes from a Sasuke (the original Ninja Warrior competition from Japan) fandom that keeps track of the obstacles at every American Ninja Warrior competition from seasons 1 through 10. Members of the fandom update the data after every episode after seeing which obstacles are used. There are 889 observations and 5 features in the data. We can answer many questions from this dataset all pertaining to the show. Some of these questions include:
+Description of how was the data collected or generated?
+- The data in this dataset comes from a Sasuke (the original Ninja Warrior competition from Japan) fandom that keeps track of the obstacles at every American Ninja Warrior competition from seasons 1 through 10. Members of the fandom update the data after every episode after seeing which obstacles are used.
 
-https://data.world/ninja/anw-obstacle-history
+How many observations (rows) and features (columns) are in your data?
+- There are 889 observations and 5 features in the data.
+
+
+What questions (from above) can be answered using the data in this dataset?
+- How does a type of entertainment keep audiences engaged? _**Changing seasons, new cast, how often?**_
+-- We can answer the above question by looking at how changing challenges and repeating 
+   popular ones keeps people entertained.

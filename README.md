@@ -17,7 +17,7 @@ This website shows the most popular global sports based on amount of coverage fr
 
 
 
-What characteristics of a video make is go viral? Analysis of viral videos to compare length, titles, title length, genre, language, etc.
+What characteristics of a video make it go viral? Analysis of viral videos to compare length, titles, title length, genre, language, etc.
 
 How does a type of entertainment keep audiences engaged? _**Changing seasons, new cast, how often?**_
 
@@ -40,6 +40,8 @@ What type of entertainment is most popular from over the years? Comparison of mo
 
 
 - What questions (from above) can be answered using the data in this dataset (**1 point**)?
+
+- *Questions such as (What characteristics of a video make is go viral? and (What type of entertainment is most popular from over the years?) can be answered by using this dataset*
 
 ## Finding Data (**15 points**, 5 points each)
 For each identified data source,

@@ -17,50 +17,66 @@ This website shows the most popular global sports based on amount of coverage fr
 
 
 
-What characteristics of a video make is go viral? Analysis of viral videos to compare length, titles, title length, genre, language, etc.
+What characteristics of a video make it go viral? Analysis of viral videos to compare length, titles, title length, genre, language, etc.
 
 How does a type of entertainment keep audiences engaged? Changing seasons, new cast, how often, adding challenges?
 
 What type of entertainment is most popular from over the years? Comparison of money involved or amount of time people spend on a certain type etc.
 
-## USvideos
+## Data Source - USvideos
 
-- Link to URL where data is from, and download the data into the project repo in a `data/` folder (**1 point**)?
+- Link to URL where data is from, and download the data into the project repo in a `data/` folder?
 [USvideos](https://www.kaggle.com/datasnaek/youtube-new?select=USvideos.csv)
 
 
-- Description of how was the data collected or generated (**1 point**)?
+- Description of how was the data collected or generated?
 
   - *The data is originally from the Trending YouTube Video statistics dataset, and it uses the daily top trending feature in YouTube to count and update the data in a daily basis.*
 
 
-- How many observations (rows) and features (columns) are in your data (**1 point**)?
+- How many observations (rows) and features (columns) are in your data?
 
   - *In the USvideos dataset there is 16 features (columns) and 40,949 observations (rows).*
 
 
-- What questions (from above) can be answered using the data in this dataset (**1 point**)?
+- What questions (from above) can be answered using the data in this dataset?
 
-## Finding Data (**15 points**, 5 points each)
-For each identified data source,
-Link to URL where data is from, and download the data into the project repo in a `data/` folder (**1 point**)?
+
+- *Questions such as (What characteristics of a video make is go viral? and (What type of entertainment is most popular from over the years?) can be answered by using this dataset*
+
+
+## Data Source - Netflix Movies and TV Shows
+Link to URL where data is from, and download the data into the project repo in a `data/` folder
 - https://www.kaggle.com/rounakbanik/the-movies-dataset?select=credits.csv
+
+Description of how was the data collected or generated?
+- This dataset includes tv shows and movies available on Netflix as of 2019. The dataset is collected from Flixable which is a third-party Netflix search engine.
+
+How many observations (rows) and features (columns) are in your data?
+- 6234 rows
+- 12 columns
+
+
+What questions (from above) can be answered using the data in this dataset?
+- What characteristics of a video make is go viral? Analysis of viral videos to compare length, titles, title length, genre, language, etc.
+- How does a type of entertainment keep audiences engaged? _**Changing seasons, new cast, how often?**_
+
+## Data Source - Disney Movies
+For each identified data source,
+Link to URL where data is from, and download the data into the project repo in a `data/` folder
 
 - https://www.kaggle.com/prateekmaj21/disney-movies
 
-Description of how was the data collected or generated (**1 point**)?
-- This dataset includes tv shows and movies available on Netflix as of 2019. The dataset is collected from Flixable which is a third-party Netflix search engine.
+Description of how was the data collected or generated?
 - This data set includes all Disney movies up to 2017. It has their release dates, genre, rating, total gross and inflation adjusted gross(2016).
 
-How many observations (rows) and features (columns) are in your data(**1 point**)?
-- 6234 rows
-- 12 columns
-or
+How many observations (rows) and features (columns) are in your data?
 - 579 rows
 - 6 columns
 
 
-What questions (from above) can be answered using the data in this dataset(**1 point**)?
+What questions (from above) can be answered using the data in this dataset?
+- What type of entertainment is most popular from over the years? Comparison of money involved or amount of time people spend on a certain type etc.
 
 
 ## Data Source - American Ninja Warrior

@@ -1,0 +1,1 @@
+USvideos <- read.csv("data/USvideos", stringsAsFactors = FALSE)

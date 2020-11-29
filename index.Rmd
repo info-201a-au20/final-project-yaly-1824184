@@ -24,7 +24,9 @@ in terms of grossing amount. These types of studies help Disney plan future
 films in terms of the genre, ratings etc. the film should stick to.
 
 ## Graph 1
-This chart was intended to show the relationship between the yearly gross of Disney movies, comparing the inflation adjusted gross and total gross, over time from 1937 to 2016.
+This chart was intended to show the relationship between the yearly gross of 
+Disney movies, comparing the inflation adjusted gross and total gross, over 
+time from 1937 to 2016.
 ```{r plot3, echo=FALSE, fig.width= 20}
 plot_line_graph
 ```

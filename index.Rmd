@@ -9,9 +9,9 @@ source("scripts/chart1.R")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Graph 1
-This chart was intended to show the relationship between the yearly gross of Disney movies, comparing the inflation adjusted gross and total gross, over time from 1937 to 2016.
+## What trends do do we see between the yearly gross of Disney movies over time?
+This chart was intended to show the relationship between the yearly gross of Disney movies, comparing the inflation adjusted gross and total gross, over time from 1937 to 2016. We made it to see which years made the most movies gross.
 ```{r plot3, echo=FALSE, fig.width= 20}
 plot_line_graph
 ```
-
+As you can see, the total gross and inflation adjsuted gross flunctuates but at and after 2014, there was an increasing trend. Before 2014, the trend of the inflation adjusted gross were all larger than the trend of total gross to account. This is likely to account for the price level changes. But in 2014 and after, the inflation adjusted gross and total gross made the same gross values.

@@ -1,0 +1,17 @@
+---
+title: "Index"
+author: "Yuhaniz"
+date: "11/25/2020"
+output: html_document
+---
+```{r setup, include=FALSE}
+source("scripts/chart1.R")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Graph 1
+This chart was intended to show the relationship between the yearly gross of Disney movies, comparing the inflation adjusted gross and total gross, over time from 1937 to 2016.
+```{r plot3, echo=FALSE, fig.width= 20}
+plot_line_graph
+```
+

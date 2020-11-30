@@ -1,15 +1,16 @@
-library("dplyr")
-library("knitr")
+library(dplyr)
 
-disney_movies_df <- read.csv("data/disney_movies.CSV", stringsAsFactors = FALSE)
 
-summary_table <- disney_movies_df %>%
-  group_by(movie_title) %>%
-  filter (inflation_adjusted_gross == mean(inflation_adjusted_gross)) %>%
-  summarize(Genre = genre,
-            Mpaa = mpaa_rating,
-            inflation_gross = mean (inflation_adjusted_gross)) %>%
-            head(n = 10)
+#Takes a dataset and reteurns a summary table
+summary_table <- function(dataset){
+  table <- group_by(dataset, genre) %>%
+    na_if("") %>%
+    filter(!is.na(genre)) %>% 
+    summarize(number = n()) %>%
+    arrange(-number) %>%
+    rename("Number of Movies" = number)
+  return(table)
+}
 
-table <- kable(summary_table)
+
   

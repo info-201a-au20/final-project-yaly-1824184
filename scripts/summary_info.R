@@ -26,3 +26,5 @@ summary_info <- function(df) {
   return(Info)
 } 
 
+
+

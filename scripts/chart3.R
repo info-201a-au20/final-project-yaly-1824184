@@ -2,7 +2,6 @@
 library("dplyr")
 library("ggplot2")
 
-setwd("~/exercises-siyas16/final-project")
 movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 
 make_3rd_chart <- function(dataset) {

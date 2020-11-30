@@ -3,16 +3,14 @@
 library("dplyr")
 library("tidyr")
 library("ggplot2")
-library("leaflet")
-library("plotly")
-library("knitr")
 library("stringr")
+
 
 # Describe the pattern of the gross (total gross and infaltion adjusted gross)
 # over time (years)
 make_1st_chart <- function(dataset) {
-  info_disney <- dataset %>%
-    mutate(year = format(as.Date(release_date, format = "%m/%d/%Y"), "%Y")) %>%
+  info_disney <-
+    mutate(dataset, year = substring(release_date, 1, 4)) %>%
     group_by(year) %>%
     summarise(
       total_gross = sum(total_gross, na.rm = TRUE),

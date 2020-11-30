@@ -14,6 +14,8 @@ source("scripts/chart3.R")
 source("scripts/chart2.R")
 source("scripts/chart1.R")
 source("scripts/summary_info.R")
+source("scripts/summary_table.R")
+movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 ```
 ## Introduction
 Our domain of interest is entertainment so in this report, we'll be studying a 
@@ -29,8 +31,7 @@ films in terms of the genre, ratings etc. the film should stick to.
 
 This data displays a few aspects of Disney movies. Such as the release dates, 
 genre, MPAA rating, total gross income and inflation adjusted gross income. In 
-this data the highest gross movie is `r Highest_Gross_Movie` *Star Wars Ep. VII: 
-The Force Awakens*. Also, the lowest gross movies would be the movies `r Lowest_Gross_Movies`. With this being said, the most common genre from the data 
+this data the highest gross movie is `r Highest_Gross_Movie`. Also, the lowest gross movies would be the movies `r Lowest_Gross_Movies`. With this being said, the most common genre from the data 
 are `r Most_Common_Genre` and the most common release date year would be the `r Most_Common_Release_Year`. Finally, in this data it displays `r Total_Movies`. 
 This can all be seen below.
 ```{r}
@@ -48,7 +49,10 @@ This chart was intended to show the relationship between the yearly gross of
 Disney movies, comparing the inflation adjusted gross and total gross, over time 
 from 1937 to 2016. We made it to see which years made the most movies gross.
 
-
+=======
+```{r plot3, echo=FALSE, fig.width= 20}
+make_1st_chart(movies)
+```
 
 As you can see, the total gross and inflation adjsuted gross flunctuates but at 
 and after 2014, there was an increasing trend. Before 2014, the trend of the 

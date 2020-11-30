@@ -1,8 +1,8 @@
 # Chart 3 - stacked bar chart of top 20 movies
 library("dplyr")
 library("ggplot2")
-setwd("~/exercises-siyas16/final-project/data")
-movies <- read.csv("disney_movies.csv", stringsAsFactors = FALSE)
+setwd("~/exercises-siyas16/final-project")
+movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 
 make_3rd_chart <- function(dataset) {
   # filters passed in dataset to the top 20 
@@ -21,6 +21,4 @@ make_3rd_chart <- function(dataset) {
                   fill = "Movie Rating")
   return(chart)
 } 
- 
-
 

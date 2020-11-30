@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r include=FALSE}
 library("knitr")
 source("chart3.R")
+source("chart2.R")
 source("chart1.R")
 source("summary_info.R")
 ```
@@ -57,6 +58,16 @@ inflation adjusted gross were all larger than the trend of total gross to
 account. This is likely to account for the price level changes. But in 2014 and 
 after, the inflation adjusted gross and total gross made the same gross values.
 
+## How does the genre of a Disney movie affect the amount grossed?
+
+This chart plots the realtionship between the inflation adjusted gross over all the different genres of movies in the dataset. We made this box plot to see which genres grossed the most money for Disney.
+
+```{r echo=FALSE}
+box_plot_adjusted(movies)
+```
+
+This box plot shows that the Adventure and Musical categories make the most money on average. The genres making the lowest amount of money are Documentary and horror.Musical has an outlier that grossed far more than any other movie. The Y value of the graph plot was limmited to make the plot readable.  
+
 
 ## What trends do we see in the top 20 highest-grossing Disney films in Disney history?
 This bar chart compares the genres and ratings of the 20 highest-grossing 
@@ -75,4 +86,3 @@ Disney has a good understanding of their audience. They clearly know that
 adventure movies make the most money so they stick to those. This chart can 
 give us more confidence in our prior chart because we once again see that 
 adventure films make a lot of money. 
-

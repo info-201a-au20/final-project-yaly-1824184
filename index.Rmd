@@ -19,7 +19,8 @@ Our domain of interest is entertainment so in this report, we'll be studying a
 data set comparing all of the movies made by Disney. We are interested in 
 exploring the domain of entertainment because it is a very broad field with lots 
 of available data in part due to the rise of streaming services. This data set 
-includes all Disney movies up to 2016. It can be found [here](https://www.kaggle.com/prateekmaj21/disney-movies?select=disney_movies.csv).
+includes all Disney movies up to 2016. It can be found
+[here](https://www.kaggle.com/prateekmaj21/disney-movies?select=disney_movies.csv).
 We want to study this data to see what types of movies are the most successful 
 in terms of grossing amount. These types of studies help Disney plan future 
 films in terms of the genre, ratings etc. the film should stick to.

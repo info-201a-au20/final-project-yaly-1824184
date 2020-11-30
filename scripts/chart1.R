@@ -8,13 +8,10 @@ library("plotly")
 library("knitr")
 library("stringr")
 
-# load data
-data <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
-
 # Describe the pattern of the gross (total gross and infaltion adjusted gross)
 # over time (years)
 make_1st_chart <- function(dataset) {
-  info_disney <- data %>%
+  info_disney <- dataset %>%
     mutate(year = format(as.Date(release_date, format = "%m/%d/%Y"), "%Y")) %>%
     group_by(year) %>%
     summarise(

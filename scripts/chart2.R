@@ -26,6 +26,7 @@ box_plot_adjusted <- function(disney_movies){
   labs(title = "Amount of Money Different Genre Makes",
        x = "Genre",
        y = "Inflation Adjusted Gross"
-      )
+      ) +
+    scale_x_discrete(guide=guide_axis(n.dodge=2))
   return(plot_adjusted)
 }

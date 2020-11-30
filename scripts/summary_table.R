@@ -9,8 +9,6 @@ summary_table <- function(dataset){
     summarize(number = n()) %>%
     arrange(-number) %>%
     rename("Number of Movies" = number)
-    
-  
   return(table)
 }
 

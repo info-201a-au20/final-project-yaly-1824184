@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r include=FALSE}
 library("knitr")
 source("chart3.R")
+source("chart2.R")
 source("chart1.R")
 source("summary_info.R")
 ```
@@ -58,6 +59,7 @@ account. This is likely to account for the price level changes. But in 2014 and
 after, the inflation adjusted gross and total gross made the same gross values.
 
 ## How does the genre of a Disney movie affect the amount grossed?
+
 This chart plots the realtionship between the inflation adjusted gross over all the different genres of movies in the dataset. We made this box plot to see which genres grossed the most money for Disney.
 
 ```{r echo=FALSE}

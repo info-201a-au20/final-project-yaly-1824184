@@ -43,7 +43,7 @@ in this data it displays `r summary$Total_Movies`. This can all be seen below.
 
 ## Summary Table
 ```{r echo=FALSE}
-summary_table(maovies)
+summary_table(movies)
 ```
 
 This table shows 10 Disney movies with the average inflation gross income of 

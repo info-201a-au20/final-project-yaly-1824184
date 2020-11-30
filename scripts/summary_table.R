@@ -11,6 +11,3 @@ summary_table <- function(dataset){
     rename("Number of Movies" = number)
   return(table)
 }
-
-
-  

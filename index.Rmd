@@ -35,8 +35,8 @@ summary <- summary_info(movies)
 This data displays a few aspects of Disney movies. Some of these include movie 
 release dates, genre, MPAA rating, total gross income and inflation adjusted 
 gross income. In this dataset the highest grossing movie is 
-`r summary$Highest_Gross_Movie`. Also, the lowest grossing movies would be the 
-movies `r summary$Lowest_Gross_Movies`. With this being said, the most common 
+`r summary$Highest_Gross_Movie`. Also, the lowest grossing movie would be the 
+movie `r summary$Lowest_Gross_Movies`. With this being said, the most common 
 genre from the data is `r summary$Most_Common_Genre` and the most common 
 release date year would be `r summary$Most_Common_Release_Year`. Finally, in 
 this data it displays `r summary$Total_Movies` different movies. Studying these

@@ -8,6 +8,6 @@ summary_table <- function(dataset){
     filter(!is.na(genre)) %>% 
     summarize(number = n()) %>%
     arrange(-number) %>%
-    rename("Number of Movies" = number)
+    rename("Number of Movies" = number, "Genre" = genre)
   return(table)
 }

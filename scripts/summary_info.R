@@ -8,6 +8,7 @@ summary_info <- function(df) {
                         max(inflation_adjusted_gross, na.rm = TRUE)) %>%
                  pull(movie_title),
                Lowest_Gross_Movies = df %>% 
+                 filter(inflation_adjusted_gross != 0) %>%
                  filter(inflation_adjusted_gross == 
                         min(inflation_adjusted_gross, na.rm = TRUE)) %>%
                  pull(movie_title),

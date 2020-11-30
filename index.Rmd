@@ -44,8 +44,9 @@ can help Disney better understand their audience and which types of movies
 they tend to like most.
 
 ## Summary Table
+
 ```{r echo=FALSE}
-summary_table(movies)
+kable(summary_table(movies))
 ```
 
 This table shows 10 Disney movies with the average inflation gross income of 
@@ -59,8 +60,8 @@ This chart was intended to show the relationship between the yearly gross of
 Disney movies, comparing the inflation adjusted gross and total gross, over time 
 from 1937 to 2016. We made it to see which years made the most movies gross.
 
-```{r plot3, echo=FALSE, fig.width= 20}
-make_1st_chart(movies)
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.width= 20}
+plot(make_1st_chart(movies))
 ```
 
 As you can see, the total gross and inflation adjusted gross fluctuates but at 
@@ -76,7 +77,7 @@ the different genres of movies in the dataset. We made this box plot to see
 which genres grossed the most money for Disney.
 
 ```{r echo=FALSE}
-box_plot_adjusted(movies)
+plot(box_plot_adjusted(movies))
 ```
 
 This box plot shows that the Adventure and Musical categories make the most 
@@ -92,7 +93,7 @@ films in Disney's history. We made it to see if there are any trends in which
 types of movies do the best.
 
 ``` {r echo=FALSE}
-make_3rd_chart(movies)
+plot(make_3rd_chart(movies))
 ```
 
 As we can see, the most popular, or highest-grossing, Disney films tend to 

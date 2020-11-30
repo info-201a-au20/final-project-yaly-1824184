@@ -2,8 +2,6 @@
 library("dplyr")
 library("ggplot2")
 
-movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
-
 make_3rd_chart <- function(dataset) {
   # filters passed in dataset to the top 20 
   top_20 <- dataset %>%

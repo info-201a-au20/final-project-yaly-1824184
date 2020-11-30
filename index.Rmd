@@ -46,7 +46,7 @@ they tend to like most.
 ## Summary Table
 
 This table was created to show the most popular genres of Disney movies.
-```{r echo=FALSE}
+```{r echo=FALSE, warning = FALSE, message = FALSE}
 kable(summary_table(movies))
 ```
 

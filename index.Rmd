@@ -18,6 +18,7 @@ source("scripts/summary_table.R")
 movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 ```
 ## Introduction
+
 Our domain of interest is entertainment so in this report, we'll be studying a 
 data set comparing all of the movies made by Disney. We are interested in 
 exploring the domain of entertainment because it is a very broad field with lots 
@@ -31,15 +32,14 @@ films in terms of the genre, ratings etc. the film should stick to.
 
 This data displays a few aspects of Disney movies. Such as the release dates, 
 genre, MPAA rating, total gross income and inflation adjusted gross income. In 
-this data the highest gross movie is `r Highest_Gross_Movie`. Also, the lowest 
-gross movies would be the movies `r Lowest_Gross_Movies`. With this being said, 
-the most common genre from the data are `r Most_Common_Genre` and the most 
-common release date year would be the `r Most_Common_Release_Year`. Finally, 
-in this data it displays `r Total_Movies`. This can all be seen below.
-```{r}
-summary
+this data the highest gross movie is `r summary$Highest_Gross_Movie`. Also, the lowest 
+gross movies would be the movies `r summary$Lowest_Gross_Movies`. With this being said, 
+the most common genre from the data are `r summary$Most_Common_Genre` and the most 
+common release date year would be the `r summary$Most_Common_Release_Year`. Finally, 
+in this data it displays `r summary$Total_Movies`. This can all be seen below.
+```{r echo=FALSE}
+summary_info(movies)
 ```
-
 
 ## Summary Table
 
@@ -48,13 +48,12 @@ each movie. Included with this is the genre of each of these movies and the
 MPAA rating. This demonstrates if the movie genre and the MPAA affects the 
 inflation gross income. 
 
-
 ## What trends do we see between the yearly gross of Disney movies over time?
+
 This chart was intended to show the relationship between the yearly gross of 
 Disney movies, comparing the inflation adjusted gross and total gross, over time 
 from 1937 to 2016. We made it to see which years made the most movies gross.
 
-=======
 ```{r plot3, echo=FALSE, fig.width= 20}
 make_1st_chart(movies)
 ```
@@ -67,7 +66,9 @@ after, the inflation adjusted gross and total gross made the same gross values.
 
 ## How does the genre of a Disney movie affect the amount grossed?
 
-This chart plots the relationship between the inflation adjusted gross over all the different genres of movies in the dataset. We made this box plot to see which genres grossed the most money for Disney.
+This chart plots the relationship between the inflation adjusted gross over all 
+the different genres of movies in the dataset. We made this box plot to see 
+which genres grossed the most money for Disney.
 
 ```{r echo=FALSE}
 box_plot_adjusted(movies)
@@ -80,6 +81,7 @@ The Y value of the graph plot was limited to make the plot readable.
 
 
 ## What trends do we see in the top 20 highest-grossing Disney films in Disney history?
+
 This bar chart compares the genres and ratings of the 20 highest-grossing 
 films in Disney's history. We made it to see if there are any trends in which
 types of movies do the best.

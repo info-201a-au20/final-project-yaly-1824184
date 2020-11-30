@@ -19,7 +19,7 @@ Most_Common_Genre <- disney_movies_df %>%
   pull(genre)
 
  Most_Common_Release_Year <- disney_movies_df %>%
-  mutate("years" = substring(release_date, 5, 8)) %>%
+  mutate("years" = substring(release_date, 1, 4)) %>%
   filter(release_date == max(release_date, na.rm = TRUE)) %>%
   pull(years)
 
@@ -37,7 +37,7 @@ summary_info <- function(df) {
                  head(n = 1) %>%
                  pull(genre),
                Most_Common_Release_Year = df %>%
-                 mutate("years" = substring(release_date, 5, 8)) %>%
+                 mutate("years" = substring(release_date, 1, 4)) %>%
                  filter(release_date == max(release_date, na.rm = TRUE)) %>%
                  pull(years),
                Total_Movies = nrow(df))

@@ -31,8 +31,7 @@ films in terms of the genre, ratings etc. the film should stick to.
 
 This data displays a few aspects of Disney movies. Such as the release dates, 
 genre, MPAA rating, total gross income and inflation adjusted gross income. In 
-this data the highest gross movie is `r Highest_Gross_Movie` *Star Wars Ep. VII: 
-The Force Awakens*. Also, the lowest gross movies would be the movies `r Lowest_Gross_Movies`. With this being said, the most common genre from the data 
+this data the highest gross movie is `r Highest_Gross_Movie`. Also, the lowest gross movies would be the movies `r Lowest_Gross_Movies`. With this being said, the most common genre from the data 
 are `r Most_Common_Genre` and the most common release date year would be the `r Most_Common_Release_Year`. Finally, in this data it displays `r Total_Movies`. 
 This can all be seen below.
 ```{r}

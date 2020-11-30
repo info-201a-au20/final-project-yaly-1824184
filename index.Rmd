@@ -50,7 +50,7 @@ This table was created to show the most popular genres of Disney movies.
 kable(summary_table(movies))
 ```
 
-The table shows that Comedy, Adventure, and Drama are by far the most common types to Disney movies in this data set. 
+The table shows that Comedy, Adventure, and Drama are by far the most common genres of Disney movies in this data set. 
 
 
 ## What trends do we see between the yearly gross of Disney movies over time?

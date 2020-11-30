@@ -2,7 +2,7 @@
 library("dplyr")
 library("ggplot2")
 setwd("~/exercises-siyas16/final-project/data")
-movies <- read.csv("disney_movies.csv", stringsAsFactors = FALSE)
+movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 
 make_3rd_chart <- function(dataset) {
   # filters passed in dataset to the top 20 

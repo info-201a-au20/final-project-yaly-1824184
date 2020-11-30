@@ -21,31 +21,6 @@ make_3rd_chart <- function(dataset) {
                   fill = "Movie Rating")
   return(chart)
 } 
-make_3rd_chart(movies)
-# Intro: Our domain of interest is entertainment so in this report, we'll be 
-#        studying a data set comparing all of the 
-#        movies made by Disney. This data set includes all Disney movies up to 
-#        2016. It can be found
-#        [here](https://www.kaggle.com/prateekmaj21/disney-movies?select=disney_movies.csv).
-#        We want to study this data to see what types of movies are the most 
-#        successful in terms of grossing amount. These types of studies help
-#        Disney plan future films in terms of the genre, ratings etc. the film
-#        should stick to.
-
-# Question: What trends do we see in the top 20 highest-grossing Disney films 
-#           in Disney history?
-
-# This bar chart compares the genres and ratings of the 20 highest-grossing 
-# films in Disney's history. We made it to see if there are any trends in which
-# types of movies do the best. 
-
-# As we can see, the most popular, or highest-grossing, Disney films tend to 
-# fall in the adventure genre. These movies are also often rated G. In the 
-# earlier chart we did, we found that adventure movies are usually the 
-# highest-grossing. I think that from these charts we've made, we can infer that 
-# Disney has a good understanding of their audience. They clearly know that 
-# adventure movies make the most money so they stick to those. This chart can 
-# give us more confidence in our prior chart because we once again see that 
-# adventure films make a lot of money. 
+ 
 
 

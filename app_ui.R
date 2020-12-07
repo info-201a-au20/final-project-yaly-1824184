@@ -2,6 +2,7 @@ library("shiny")
 library("ggplot2")
 library("dplyr")
 library("tidyr")
+library("plotly")
 
 movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 
@@ -131,7 +132,7 @@ genre_plot_sidebar_content <- sidebarPanel(
   )
 )
 #create main panel
-genre_polt_main_content <- mainPanel(
+genre_plot_main_content <- mainPanel(
   plotlyOutput("genre_plot")
 )
 #create the tab panel
@@ -140,7 +141,7 @@ page_three <- tabPanel(
   titlePanel("Genre comparison"),
   sidebarLayout(
     genre_plot_sidebar_content,
-    genre_polt_main_content
+    genre_plot_main_content
   )
 )
 
@@ -197,7 +198,7 @@ page_five <- tabPanel(
   "Page five"
 )
 
-ui <- navbarpage("Disney Data",
+ui <- navbarPage("Disney Data",
                  page_one,
                  page_two,
                  page_three,

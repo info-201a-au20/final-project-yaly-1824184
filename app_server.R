@@ -20,7 +20,7 @@ server <- function(input, output) {
   })
   output$genre_plot <- renderPlotly ({
     movies_genre_edit_select <- filter(movies_genre_edit, genre == input$genre)
-    fig <- plot_ly(data = df_genre_select, x = ~genre, y = ~inflation_adjusted_gross, type = "box") %>%
+    fig <- plot_ly(data = movies_genre_edit_select, x = ~genre, y = ~inflation_adjusted_gross, type = "box") %>%
       layout(yaxis = list(range = c(0, input$range), title = "Gross"))
     return(fig)
   })

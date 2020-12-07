@@ -69,18 +69,32 @@ page_one <- tabPanel (
 )
 
 
-# 1st chart
-page_two <- tabPanel(
-  "Page two",
-  sidebarLayout(
-    sidebarPanel(
-      
-    ),
-    mainPanel(
-      
-    )
-  )
-)
+ # 1st chart
+# mutated movies dataframe
+movies_edit <- na_if(movies, "") %>%
+  filter(!is.na(genre)) %>%
+  filter(inflation_adjusted_gross != 0) %>%
+  mutate("year" = substring(release_date, 1, 4)) %>%
+  mutate(year = as.numeric(year))
+
+#data from disney dataset
+genre_unique <- unique(movies$genre) 
+
+# selectInput drop down menu to select a single genre
+genre_pick <- selectInput(inputId = "genre_pick",
+                          label = "Select Genre",
+                          choices = genre_unique,
+                          selected = genre_unique[1],
+                          multiple = FALSE)
+
+page_two <-
+ tabPanel("Disney Scatter Plot",
+          sidebarLayout(
+            sidebarPanel(genre_pick),
+            mainPanel(plotlyOutput("scatter_plot")),
+          ))
+
+
 
 # 2nd chart
 #dataset without missing genre and inflation adjusted gross
@@ -185,7 +199,7 @@ page_five <- tabPanel(
 
 ui <- navbarpage("Disney Data",
                  page_one,
-                 #page_two,
+                 page_two,
                  page_three,
                  page_four,
                  page_five)

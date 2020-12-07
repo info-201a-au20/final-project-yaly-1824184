@@ -5,7 +5,7 @@ library("tidyr")
 
 movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 
-#MULTIPLE TABS FORMAT
+
 # Intro page
 page_one <- tabPanel (
   tags$body( "Summary",
@@ -185,7 +185,7 @@ page_five <- tabPanel(
 
 ui <- navbarpage("Disney Data",
                  page_one,
-                 page_two,
+                 #page_two,
                  page_three,
                  page_four,
                  page_five)

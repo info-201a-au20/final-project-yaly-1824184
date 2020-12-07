@@ -16,14 +16,13 @@ page_one <- tabPanel ("Summary",
                img(src="Walt-Disney-Pictures-Logo.jpg", width = "1050px", 
                    height = "521px"),
                
-               p("We are interested in exploring the domain of entertainment 
-               because it is a very broad field with lots of available data in 
-               part due to the rise of streaming services. There are many 
-               different ways people use their free time on entrainment today.
-               Such as TV, Netflix, Spotify, YouTube, Disney +, Movies, 
-               Podcasts, Games, Twitter, etc. We have all been consuming a lot
-               of entertainment recently because of COVID-19.")
-               ,
+               p("Our domain of interest is entertainment so in this report,
+               we'll be studying a data set comparing all of the movies made by 
+               Disney. We are interested in exploring the domain of 
+               entertainment because it is a very broad field with lots of 
+               available data in part due to the rise of streaming services. 
+               This data set includes all", tags$b("Disney"), "movies up to 
+               2016."),
                
                h2("Summary"),
                
@@ -31,9 +30,9 @@ page_one <- tabPanel ("Summary",
                because it is a very broad field with lots of available data in 
                part due to the rise of streaming services. There are many 
                different ways people use their free time on entrainment today. 
-               Such as TV, Netflix, Spotify, YouTube, Disney +, Movies, 
-               Podcasts, Games, Twitter, etc. We have all been consuming a lot 
-               of entertainment recently because of COVID-19."),
+               Such as", tags$em("TV, Netflix, Spotify, YouTube, Disney +, 
+               Movies, Podcasts, Games, Twitter, etc."), "We have all been 
+               consuming a lot of entertainment recently because of COVID-19."),
                
                h2("Major Questions"),
                
@@ -41,19 +40,16 @@ page_one <- tabPanel ("Summary",
                
                tags$ol(
                  
-                 tags$li("What characteristics of a video make it go viral? 
-                 Analysis of viral videos to compare length, titles, title 
-                 length, genre, language, etc."),
+                 tags$li("What are the particular movie trends that affect the 
+                 yearly gross income of Disney movies over time?"),
                  
                  
-                 tags$li("How does a type of entertainment keep audiences 
-                 engaged? Changing seasons, new cast, how often, adding 
-                 challenges?"),
+                 tags$li("How does the genre of a Disney movie affect the amount
+                         of gross income the film will produce?"),
                  
                  
-                 tags$li("What type of entertainment is most popular from over 
-                 the years? Comparison of money involved or amount of time 
-                 people spend on a certain type etc.")
+                 tags$li("What trends do we notice in the top 20 
+                 highest-grossing films in the Disney data set?")
                ),
                
                

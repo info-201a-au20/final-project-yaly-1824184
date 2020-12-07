@@ -27,7 +27,7 @@ page_two <- tabPanel(
 
 # 2nd chart
 #dataset without missing genre and inflation adjusted gross
-movies_grnre_edit <- na_if(df, "") %>%
+movies_genre_edit <- na_if(movies, "") %>%
   filter(!is.na(genre)) %>%
   filter(inflation_adjusted_gross != 0)
 #creating sidebarPanel

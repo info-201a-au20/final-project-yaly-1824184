@@ -24,4 +24,25 @@ server <- function(input, output) {
       layout(yaxis = list(range = c(0, input$range), title = "Gross"))
     return(fig)
   })
+
+  #scatterplot chart
+ output$scatter_plot <- renderPlotly({
+    plot_data <- movies_edit %>%
+      filter(genre %in% input$genre_pick)
+    
+    plot2 <- plot_ly(data = plot_data, 
+                     x = ~year, 
+                     y = ~inflation_adjusted_gross, 
+                     type = "scatter",
+                     mode = "markers",
+                     color = ~genre, colors = "Set1",
+                     text = ~movie_title) %>%
+      layout(title = "Disney Movies throughout the Year",
+             xaxis = list(
+               title = "Years"),
+             yaxis = list(
+               title = "Inflation Adjusted Gross"))
+    
+    return(plot2)
+  })
 }

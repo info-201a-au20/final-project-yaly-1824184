@@ -1,7 +1,7 @@
 library("shiny")
 library("ggplot2")
 library("dplyr")
-library("tidylr")
+library("tidyr")
 
 movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 
@@ -26,15 +26,50 @@ page_two <- tabPanel(
 )
 
 # 2nd chart
+#dataset without missing genre and inflation adjusted gross
+movies_grnre_edit <- na_if(df, "") %>%
+  filter(!is.na(genre)) %>%
+  filter(inflation_adjusted_gross != 0)
+#creating sidebarPanel
+genre_plot_sidebar_content <- sidebarPanel(
+  selectInput("genre", "Genre",
+              list("Action" = "Action",
+                   "Adventure" = "Adventure",
+                   "Black Comedy" = "Black Comedy",
+                   "Comedy" = "Comedy",
+                   "Concert/Performance" = "Concert/Performance",
+                   "Documentary" = "Documentary",
+                   "Drama" = "Drama",
+                   "Horror" = "Horror",
+                   "Musical" = "Musical",
+                   "Romantic Comedy" = "Romantic Comedy",
+                   "Thriller/Suspense" = "Thriller/Suspense",
+                   "Western" = "Western"),
+              multiple = TRUE
+  ),
+  radioButtons("genre_range", "Inflation adjusted gross",
+               list("6 Billion" = 6000000000,
+                    "5 Billion" = 5000000000,
+                    "4 Billion" = 4000000000,
+                    "3 Billion" = 3000000000,
+                    "2 Billion" = 2000000000,
+                    "1 Billion" = 1000000000,
+                    "500 Million" = 500000000,
+                    "250 Million" = 250000000)
+               
+  )
+)
+#create main panel
+genre_polt_main_content <- mainPanel(
+  plotlyOutput("genre_plot")
+)
+#create the tab panel
 page_three <- tabPanel(
-  "Page three",
+  "Genre Plot",
+  titlePanel("Genre comparison"),
   sidebarLayout(
-    sidebarPanel(
-      
-    ),
-    mainPanel(
-      
-    )
+    genre_plot_sidebar_content,
+    genre_polt_main_content
   )
 )
 

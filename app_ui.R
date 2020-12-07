@@ -7,9 +7,8 @@ movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 
 
 # Intro page
-page_one <- tabPanel (
-  tags$body( "Summary",
-             
+page_one <- tabPanel ("Summary",
+  tags$body(
              mainPanel(
                h1("Disney Movies"),
                
@@ -59,7 +58,7 @@ page_one <- tabPanel (
                
                h2("Data used to Answer"),
                
-               p("We will be using the tags$em", tags$em("disney_movies"), "data
+               p("We will be using the", tags$em("disney_movies"), "data
                set to answer our major questions about", tags$b("Disney"), 
                "movies. This data set includes all", tags$b("Disney"), "movies 
                up to 2016. It has  their release dates, genre, rating, total 
@@ -197,7 +196,7 @@ page_five <- tabPanel(
   "Page five"
 )
 
-ui <- navbarpage("Disney Data",
+ui <- navbarPage("Disney Data",
                  page_one,
                  page_two,
                  page_three,

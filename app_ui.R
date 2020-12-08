@@ -12,17 +12,16 @@ page_one <- tabPanel ("Introduction",
   tags$body(
              mainPanel(
                h1("Disney Movies"),
-               
-               img(src="Walt-Disney-Pictures-Logo.jpg", width = "1050px", 
-                   height = "521px"),
-               
-               p("Our domain of interest is entertainment so in this report,
+                  p("Our domain of interest is entertainment so in this report,
                we'll be studying a data set comparing all of the movies made by 
                Disney. We are interested in exploring the domain of 
                entertainment because it is a very broad field with lots of 
                available data in part due to the rise of streaming services. 
                This data set includes all", tags$b("Disney"), "movies up to 
                2016."),
+               
+               img(src="Walt-Disney-Pictures-Logo.jpg", width = "1050px", 
+                   height = "521px"),
                
                h2("Summary"),
                
@@ -36,20 +35,20 @@ page_one <- tabPanel ("Introduction",
                
                h2("Major Questions"),
                
-               p("These are questions we seek to answer:"),
+               "These are questions we seek to answer:",
                
                tags$ol(
                  
                  tags$li("What are the particular movie trends that affect the 
-                 yearly gross income of Disney movies over time?"),
+                 yearly gross income of", tags$b("Disney"), "movies over time?"),
                  
                  
-                 tags$li("How does the genre of a Disney movie affect the amount
+                 tags$li("How does the genre of a", tags$b("Disney"), "movie affect the amount
                          of gross income the film will produce?"),
                  
                  
-                 tags$li("What trends do we notice in the top 20 
-                 highest-grossing films in the Disney data set?")
+                 tags$li("What trends do we notice in the top 10 and top 20 
+                 highest-grossing films in the", tags$b("Disney"), "data set?")
                ),
                
                
@@ -178,7 +177,7 @@ page_four <- tabPanel(
     ),
     mainPanel(
       h1("Comparing the Highest-Grossing Disney Films"),
-      p("This chart compares the highest grossing Disney films of all time. On
+      p("This chart compares the highest grossing", tags$b("Disney"), "films of all time. On
         the left hand side, choose if you want to compare the top 10 or 20 
         movies than see the genre and ratings of these films. We can study which
         types of movies are most succesful. You can also study which years these
@@ -212,9 +211,13 @@ page_five <- tabPanel(
     )
 )
 
-ui <- navbarPage("Disney Data",
+ui <- fluidPage(
+  includeCSS("style.css"),
+  navbarPage("Disney Data",
                  page_one,
                  page_two,
                  page_three,
                  page_four,
-                 page_five)
+                 page_five
+  )
+)

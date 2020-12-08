@@ -176,11 +176,11 @@ page_four <- tabPanel(
   "Top Grossing Films",
   sidebarLayout(
     sidebarPanel(
+      h1("Comparing the Highest-Grossing Disney Films"),
       bar_fill,
       which_movies
     ),
     mainPanel(
-      h1("Comparing the Highest-Grossing Disney Films"),
       p("This chart compares the highest grossing", tags$b("Disney"), "films of all time. On
         the left hand side, choose if you want to compare the top 10 or 20 
         movies than see the genre and ratings of these films. We can study which
@@ -195,33 +195,40 @@ page_four <- tabPanel(
 page_five <- tabPanel(
   "Major Takeaways",
   mainPanel(
+    h1("1st Takeaway:"),
+    h2("What genres are most popular in Disney films?"),
+    p("This dataset shows that the Action, Adventure, and Musical genres make
+      the most money. Using the genre plot page to compare all the genres these
+      three genres have the highest medians and q3s of all the box plots. When
+      you look at the boxplots for adventure and musical, an outlier really
+      sticks out in both these plots. Those movies, 'Snow White and the Seven
+      Dwarfs' and 'Pinnochio', were the 2 highest-grossing Disney films. The 
+      former is in the musical genre and the latter in the adventure. This
+      confirms how popular those 2 genres are."),
     h1("3rd Takeaway:"),
     h2("What trends do we see in the top 20 highest-grossing 
         Disney films in Disney history?"),
-    p("This dataset shows that the Action, Adventure, and Musical genres make
-      the most money. Using the genre plot page to compare all the genres these
-      three genres have the highest medians and q3s of all the box plots."),
     p("Sometimes, a small subset of a dataset can tell a different story than 
       the whole dataset, but that wasn't the case when we studied the highest-
-      grossing Disney movies. Adventure movies are usually the highest-grossing
-      movies for Disney, and of the top 20 films, 10 were adventure movies. We 
-      can also see that most of the top 20 films are rated G. Disney makes a lot
-      of family movies so it would make sense that those rated G would be most
-      popular since a G rating means the movie is suitable for any age. Something
-      I thought was interesting from this dataset was that 4 of the top 20 films
-      were released in 2015-16. It seems like Disney's most recent content has 
-      been quite successful. Surprisingly, these films are rated PG-13 which
-      suggests that the movies that see the most success might shift from G 
-      rated movies to PG-13 ones in coming years. To see the data for yourself, 
-      and to compare it with the top 10 Disney films, you can navigate to the
-      'Top Grossing Films' page. Disney might need to continue focusing a bit 
-      more on their older audience rather than younger since that has really 
-      been working for them recently. Studying the top 20 movies and recent 
-      trends is a good way to understand Disney's audience and what they like. 
-      The better Disney understands their audience, the better they can cater to 
-      them. For example, if Disney knows their audience loves adventure films, 
-      they will continue making more. That way, they make more money and the 
-      audience is happy too."),
+      grossing Disney movies. Adventure movies are usually some of the 
+      highest-grossing movies for Disney, and of the top 20 films, 10 were 
+      adventure movies. We can also see that most of the top 20 films are rated 
+      G. Disney makes a lot of family movies so it would make sense that those 
+      rated G would be most popular since a G rating means the movie is suitable
+      for any age. Something I thought was interesting from this dataset was 
+      that 4 of the top 20 films were released in 2015-16. It seems like 
+      Disney's most recent content has been quite successful. Surprisingly, 
+      these films are rated PG-13 which suggests that the movies that see the 
+      most success might shift from G rated movies to PG-13 ones in coming years. 
+      To see the data for yourself, and to compare it with the top 10 Disney 
+      films, you can navigate to the 'Top Grossing Films' page. Disney might 
+      need to continue focusing a bit more on their older audience rather than 
+      younger since that has really been working for them recently. Studying the 
+      top 20 movies and recent trends is a good way to understand Disney's 
+      audience and what they like. The better Disney understands their audience, 
+      the better they can cater to them. For example, if Disney knows their 
+      audience loves adventure films, they will continue making more. That way, 
+      they make more money and the audience is happy too."),
     )
 )
 

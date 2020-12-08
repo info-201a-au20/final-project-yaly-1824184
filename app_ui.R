@@ -200,7 +200,7 @@ page_five <- tabPanel(
         Disney films in Disney history?"),
     p("This dataset shows that the Action, Adventure, and Musical genres make
       the most money. Using the genre plot page to compare all the genres these
-      three genres have the higest medians and q3s of all the box plots."),
+      three genres have the highest medians and q3s of all the box plots."),
     p("Sometimes, a small subset of a dataset can tell a different story than 
       the whole dataset, but that wasn't the case when we studied the highest-
       grossing Disney movies. Adventure movies are usually the highest-grossing

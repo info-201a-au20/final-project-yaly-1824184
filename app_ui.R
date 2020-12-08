@@ -191,7 +191,7 @@ page_four <- tabPanel(
 page_five <- tabPanel(
   "Major Takeaways",
   mainPanel(
-    h1("1st Takeaway:"),
+    h1("3rd Takeaway:"),
     h2("What trends do we see in the top 20 highest-grossing 
         Disney films in Disney history?"),
     p("Sometimes, a small subset of a dataset can tell a different story than 
@@ -205,9 +205,16 @@ page_five <- tabPanel(
       were released in 2015-16. It seems like Disney's most recent content has 
       been quite successful. Surprisingly, these films are rated PG-13 which
       suggests that the movies that see the most success might shift from G 
-      rated movies to PG-13 ones in coming years. All in all, it seems like
-      Disney understands their audience well and caters to them to the best of
-      their ability.")
+      rated movies to PG-13 ones in coming years. To see the data for yourself, 
+      and to compare it with the top 10 Disney films, you can navigate to the
+      'Top Grossing Films' page. Disney might need to continue focusing a bit 
+      more on their older audience rather than younger since that has really 
+      been working for them recently. Studying the top 20 movies and recent 
+      trends is a good way to understand Disney's audience and what they like. 
+      The better Disney understands their audience, the better they can cater to 
+      them. For example, if Disney knows their audience loves adventure films, 
+      they will continue making more. That way, they make more money and the 
+      audience is happy too."),
     )
 )
 

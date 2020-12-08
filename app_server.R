@@ -18,6 +18,7 @@ server <- function(input, output) {
       labs(title = title, x = "Genre", fill = input$bar_fill, y = "Count")
     p
   })
+  
   output$genre_plot <- renderPlotly ({
     movies_genre_edit_select <- filter(movies_genre_edit, genre == input$genre)
     fig <- plot_ly(data = movies_genre_edit_select, x = ~genre, y = ~inflation_adjusted_gross, type = "box") %>%
@@ -25,7 +26,7 @@ server <- function(input, output) {
     return(fig)
   })
 
-  #scatterplot chart
+  #scatterplot 
  output$scatter_plot <- renderPlotly({
     plot_data <- movies_edit %>%
       filter(genre %in% input$genre_pick)

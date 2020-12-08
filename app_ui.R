@@ -127,6 +127,10 @@ genre_plot_sidebar_content <- sidebarPanel(
 )
 #create main panel
 genre_plot_main_content <- mainPanel(
+  p("This chart compares the inflation adjusted gross of", tags$b("Disney"), "films by genre.
+        On the left side of the page select the genres to be compared and the limit of the yaxis.
+        The plot is a box and whisker plot that can be used to show which genres made more money.
+        Hover over the box plots to see more in-depth values."),
   plotlyOutput("genre_plot")
 )
 #create the tab panel
@@ -194,6 +198,9 @@ page_five <- tabPanel(
     h1("3rd Takeaway:"),
     h2("What trends do we see in the top 20 highest-grossing 
         Disney films in Disney history?"),
+    p("This dataset shows that the Action, Adventure, and Musical genres make
+      the most money. Using the genre plot page to compare all the genres these
+      three genres have the higest medians and q3s of all the box plots."),
     p("Sometimes, a small subset of a dataset can tell a different story than 
       the whole dataset, but that wasn't the case when we studied the highest-
       grossing Disney movies. Adventure movies are usually the highest-grossing

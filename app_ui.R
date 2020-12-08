@@ -8,7 +8,7 @@ movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 
 
 # Intro page
-page_one <- tabPanel ("Summary",
+page_one <- tabPanel ("Introduction",
   tags$body(
              mainPanel(
                h1("Disney Movies"),
@@ -190,7 +190,26 @@ page_four <- tabPanel(
 
 # summarize three things
 page_five <- tabPanel(
-  "Page five"
+  "Major Takeaways",
+  mainPanel(
+    h1("1st Takeaway:"),
+    h2("What trends do we see in the top 20 highest-grossing 
+        Disney films in Disney history?"),
+    p("Sometimes, a small subset of a dataset can tell a different story than 
+      the whole dataset, but that wasn't the case when we studied the highest-
+      grossing Disney movies. Adventure movies are usually the highest-grossing
+      movies for Disney, and of the top 20 films, 10 were adventure movies. We 
+      can also see that most of the top 20 films are rated G. Disney makes a lot
+      of family movies so it would make sense that those rated G would be most
+      popular since a G rating means the movie is suitable for any age. Something
+      I thought was interesting from this dataset was that 4 of the top 20 films
+      were released in 2015-16. It seems like Disney's most recent content has 
+      been quite successful. Surprisingly, these films are rated PG-13 which
+      suggests that the movies that see the most success might shift from G 
+      rated movies to PG-13 ones in coming years. All in all, it seems like
+      Disney understands their audience well and caters to them to the best of
+      their ability.")
+    )
 )
 
 ui <- navbarPage("Disney Data",

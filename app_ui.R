@@ -99,7 +99,7 @@ page_two <-
             mainPanel(
               p("This scatter plot is an overview of", tags$b("Disney"), "movies between 1937 to  2016. 
                 On the left hand side, change the settings you want the graph to filter by.
-                You may select one genre in the dropdown menu and select up to 6 ratings.
+                You may select one genre in the dropdown menu and select up to 5 ratings.
                 This will enable you to view which Disney movies were the highest grossing films throughout time. 
                 Also, notice how the quantity of certain genres and ratings of movies changed through time.
                 Hover over each data point on the graph to see the movie title, the release date, and the gross."),

@@ -40,7 +40,7 @@ page_one <- tabPanel ("Introduction",
                tags$ol(
                  
                  tags$li("What are the particular movie trends that affect the 
-                 yearly gross income of", tags$b("Disney"), "movies over time?"),
+                 gross income of", tags$b("Disney"), "movies over time?"),
                  
                  
                  tags$li("How does the genre of a", tags$b("Disney"), "movie affect the amount
@@ -64,16 +64,19 @@ page_one <- tabPanel ("Introduction",
 )
 
 
- # 1st chart
-# mutated movies dataframe
+# 1st chart
+# filtered movies dataframe to get rid of empty values
 movies_edit <- na_if(movies, "") %>%
   filter(!is.na(genre)) %>%
+  filter(inflation_adjusted_gross != 0) %>%
+  filter(!is.na(mpaa_rating)) %>%
   filter(inflation_adjusted_gross != 0) %>%
   mutate("year" = substring(release_date, 1, 4)) %>%
   mutate(year = as.numeric(year))
 
-#data from disney dataset
-genre_unique <- unique(movies$genre) 
+#created separate varibales for unique genre and rating
+genre_unique <- unique(movies$genre)
+rating_unique <- unique(movies$mpaa_rating)
 
 # selectInput drop down menu to select a single genre
 genre_pick <- selectInput(inputId = "genre_pick",
@@ -82,11 +85,24 @@ genre_pick <- selectInput(inputId = "genre_pick",
                           selected = genre_unique[1],
                           multiple = FALSE)
 
+# checkboxGroupInput to select single/multiple ratings 
+rating_pick <- checkboxGroupInput(inputId = "rating_pick",
+                                  label = "Select Rating",
+                                  choices = rating_unique,
+                                  selected = rating_unique)
+
 page_two <-
- tabPanel("Disney Scatter Plot",
+ tabPanel("Overview",
           sidebarLayout(
-            sidebarPanel(genre_pick),
-            mainPanel(plotlyOutput("scatter_plot")),
+            sidebarPanel(genre_pick, rating_pick),
+            mainPanel(
+              h1("Overview of Disney Movies between 1937 to 2016"),
+              p("This scatter plot is an overview of Disney movies between 1937 to  2016. 
+                On the left hand side, change the settings you want the graph to filter by.
+                You may select one genre in the dropdown menu and select up to 6 ratings.
+                This will enable you to view which Disney movies were the highest grossing films throughout time. 
+                Also, notice how the quantity of certain genres and ratings of movies changed through time."),
+              plotlyOutput("scatter_plot")),
           ))
 
 
@@ -127,10 +143,11 @@ genre_plot_sidebar_content <- sidebarPanel(
 )
 #create main panel
 genre_plot_main_content <- mainPanel(
-  p("This chart compares the inflation adjusted gross of", tags$b("Disney"), "films by genre.
-        On the left side of the page select the genres to be compared and the limit of the yaxis.
-        The plot is a box and whisker plot that can be used to show which genres made more money.
-        Hover over the box plots to see more in-depth values."),
+  p("This chart compares the inflation adjusted gross of", tags$b("Disney"),
+    "films by genre. On the left side of the page select the genres to be
+    compared and the limit of the yaxis. The plot is a box and whisker plot
+    that can be used to show which genres made more money. Hover over the box
+    plots to see more in-depth values."),
   plotlyOutput("genre_plot")
 )
 #create the tab panel
@@ -181,8 +198,8 @@ page_four <- tabPanel(
       which_movies
     ),
     mainPanel(
-      p("This chart compares the highest grossing", tags$b("Disney"), "films of all time. On
-        the left hand side, choose if you want to compare the top 10 or 20 
+      p("This chart compares the highest grossing", tags$b("Disney"),
+        "films of all time. On the left hand side, choose if you want to compare the top 10 or 20 
         movies than see the genre and ratings of these films. We can study which
         types of movies are most succesful. You can also study which years these
         top movies were made."),
@@ -196,6 +213,17 @@ page_five <- tabPanel(
   "Major Takeaways",
   mainPanel(
     h1("1st Takeaway:"),
+    h2("What trend do you see between the movie gross over time?"),
+    p("Overall, after the 1990s, Disney tended to have produced more movies
+      across all genres and ratings. Prior to the 1990s, Disney did not have
+      as many movies, as it had less than five movies across all ratings for
+      each genre. However, in 1937, the movie ‘Snow White and the Seven Dwarfs’
+      significantly skewed the plot in the musical genre because its inflation
+      adjusted gross was the largest of over 5.2 billion dollars. Snow White
+      was Disney’s first movie, which suggests that this movie must have
+      continued to accumulate its gross earnings since then. Also, Snow White
+      is a rated G (general audience) movie, which is Disney’s popular theme."),
+    h1("2nd Takeaway:"),
     h2("What genres are most popular in Disney films?"),
     p("This dataset shows that the Action, Adventure, and Musical genres make
       the most money. Using the genre plot page to compare all the genres these

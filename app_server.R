@@ -1,6 +1,7 @@
 library("shiny")
 library("ggplot2")
 library("dplyr")
+library("plotly")
 
 # Final Project
 server <- function(input, output) {
@@ -33,20 +34,21 @@ server <- function(input, output) {
   #scatterplot 
  output$scatter_plot <- renderPlotly({
     plot_data <- movies_edit %>%
-      filter(genre %in% input$genre_pick)
+      filter(genre %in% input$genre_pick) %>%
+      filter(mpaa_rating %in% input$rating_pick)
     
     plot2 <- plot_ly(data = plot_data, 
                      x = ~year, 
                      y = ~inflation_adjusted_gross, 
                      type = "scatter",
                      mode = "markers",
-                     color = ~genre, colors = "Set1",
+                     color = ~genre, colors = "Set2",
                      text = ~movie_title) %>%
-      layout(title = "Disney Movies throughout the Year",
+      layout(title = "The Gross of Disney Movies throughout the Year",
              xaxis = list(
                title = "Years"),
              yaxis = list(
-               title = "Inflation Adjusted Gross"))
+               title = "Inflation Adjusted Gross (USD)"))
     
     return(plot2)
   })

@@ -17,8 +17,8 @@ page_one <- tabPanel("Introduction",
                Disney. We are interested in exploring the domain of
                entertainment because it is a very broad field with lots of
                available data in part due to the rise of streaming services.
-               This data set includes all", tags$b("Disney"), "movies up to
-               2016."),
+               This", a(href= "https://www.kaggle.com/prateekmaj21/disney-movies", "data set"), 
+               "includes all", tags$b("Disney"), "movies up to 2016."),
 
                img(src="Walt-Disney-Pictures-Logo.jpg", width = "750px",
                    height = "430px"),
@@ -64,7 +64,7 @@ page_one <- tabPanel("Introduction",
 )
 
 
-# 1st chart
+# widgets for page 1
 # filtered movies dataframe to get rid of empty values
 movies_edit <- na_if(movies, "") %>%
   filter(!is.na(genre)) %>%

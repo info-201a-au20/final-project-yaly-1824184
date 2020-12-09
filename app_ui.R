@@ -8,20 +8,19 @@ movies <- read.csv("data/disney_movies.csv", stringsAsFactors = FALSE)
 
 
 # Intro page
-page_one <- tabPanel ("Introduction",
+page_one <- tabPanel("Introduction",
   tags$body(
              mainPanel(
                h1("Disney Movies"),
                   p("Our domain of interest is entertainment so in this report,
-               we'll be studying a data set comparing all of the movies made by 
-               Disney. We are interested in exploring the domain of 
-               entertainment because it is a very broad field with lots of 
-               available data in part due to the rise of streaming services. 
-               This data set includes all", tags$b("Disney"), "movies up to 
+               we'll be studying a data set comparing all of the movies made by
+               Disney. We are interested in exploring the domain of
+               entertainment because it is a very broad field with lots of
+               available data in part due to the rise of streaming services.
+               This data set includes all", tags$b("Disney"), "movies up to
                2016."),
-              
-               
-               img(src="Walt-Disney-Pictures-Logo.jpg", width = "750px", 
+
+               img(src="Walt-Disney-Pictures-Logo.jpg", width = "750px",
                    height = "430px"),
                
                h2("Summary"),

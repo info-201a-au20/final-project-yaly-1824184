@@ -21,7 +21,7 @@ server <- function(input, output) {
   })
 
   output$genre_plot <- renderPlotly({
-    movies_genre_edit_select <- filter(movies_genre_edit, input$genre)
+    movies_genre_edit_select <- filter(movies_genre_edit, genre%in% input$genre)
     fig <- plot_ly(data = movies_genre_edit_select,
                    x = ~genre,
                    y = ~inflation_adjusted_gross,

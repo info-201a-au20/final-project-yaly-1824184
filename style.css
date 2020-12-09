@@ -1,18 +1,25 @@
 h1 {
-  color: darkblue;
+  color: white;
+  font-family: "Papyrus";
+  font-weight: bold;
+  font-style: oblique;
 }
 
 h2{
   color: darkblue;
+  font-family: "Papyrus";
+  font-weight: bold;
 }
 
 p{
   background-color: white;
   color: purple;
+  font-family: "Arial";
 }
 
 li{
   color: white;
+  font-family: "Arial";
 }
 
 ol{

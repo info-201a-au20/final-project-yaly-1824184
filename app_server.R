@@ -43,7 +43,7 @@ server <- function(input, output) {
                      type = "scatter",
                      mode = "markers",
                      color = ~genre, colors = "Set3",
-                     text = ~movie_title) %>%
+                     text = ~paste(movie_title, "<br>", mpaa_rating)) %>%
       layout(title = "The Gross of Disney Movies throughout the Year",
              xaxis = list(
                title = "Years"),

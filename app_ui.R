@@ -19,9 +19,10 @@ page_one <- tabPanel ("Introduction",
                available data in part due to the rise of streaming services. 
                This data set includes all", tags$b("Disney"), "movies up to 
                2016."),
+              
                
-               img(src="Walt-Disney-Pictures-Logo.jpg", width = "1050px", 
-                   height = "521px"),
+               img(src="Walt-Disney-Pictures-Logo.jpg", width = "750px", 
+                   height = "430px"),
                
                h2("Summary"),
                
@@ -75,8 +76,8 @@ movies_edit <- na_if(movies, "") %>%
   mutate(year = as.numeric(year))
 
 #created separate varibales for unique genre and rating
-genre_unique <- unique(movies$genre)
-rating_unique <- unique(movies$mpaa_rating)
+genre_unique <- unique(movies_edit$genre)
+rating_unique <- unique(movies_edit$mpaa_rating)
 
 # selectInput drop down menu to select a single genre
 genre_pick <- selectInput(inputId = "genre_pick",
@@ -92,8 +93,8 @@ rating_pick <- checkboxGroupInput(inputId = "rating_pick",
                                   selected = rating_unique)
 
 page_two <-
- tabPanel("Overview",
-          titlePanel("Overview of Disney Movies between 1937 to 2016"),
+ tabPanel("Relationships",
+          titlePanel("Relationship of Disney Movies between 1937 to 2016"),
           sidebarLayout(
             sidebarPanel(genre_pick, rating_pick),
             mainPanel(
@@ -192,9 +193,9 @@ which_movies <- radioButtons(
 
 page_four <- tabPanel(
   "Top Grossing Films",
+  titlePanel("Comparing the Highest-Grossing Disney Films"),
   sidebarLayout(
     sidebarPanel(
-      h1("Comparing the Highest-Grossing Disney Films"),
       bar_fill,
       which_movies
     ),

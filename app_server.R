@@ -42,7 +42,7 @@ server <- function(input, output) {
                      y = ~inflation_adjusted_gross, 
                      type = "scatter",
                      mode = "markers",
-                     color = ~genre, colors = "Set2",
+                     color = ~genre, colors = "Set3",
                      text = ~movie_title) %>%
       layout(title = "The Gross of Disney Movies throughout the Year",
              xaxis = list(

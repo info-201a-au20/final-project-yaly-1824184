@@ -57,8 +57,8 @@ page_one <- tabPanel ("Introduction",
                p("We will be using the", tags$em("disney_movies"), "data
                set to answer our major questions about", tags$b("Disney"), 
                "movies. This data set includes all", tags$b("Disney"), "movies 
-               up to 2016. It has  their release dates, genre, rating, total 
-               gross and inflation adjusted gross(2016).")
+               up to 2016. It has  their release dates, genre, rating, and inflation 
+               adjusted gross.")
              )
       )
 )
@@ -93,15 +93,16 @@ rating_pick <- checkboxGroupInput(inputId = "rating_pick",
 
 page_two <-
  tabPanel("Overview",
+          titlePanel("Overview of Disney Movies between 1937 to 2016"),
           sidebarLayout(
             sidebarPanel(genre_pick, rating_pick),
             mainPanel(
-              h1("Overview of Disney Movies between 1937 to 2016"),
-              p("This scatter plot is an overview of Disney movies between 1937 to  2016. 
+              p("This scatter plot is an overview of", tags$b("Disney"), "movies between 1937 to  2016. 
                 On the left hand side, change the settings you want the graph to filter by.
                 You may select one genre in the dropdown menu and select up to 6 ratings.
                 This will enable you to view which Disney movies were the highest grossing films throughout time. 
-                Also, notice how the quantity of certain genres and ratings of movies changed through time."),
+                Also, notice how the quantity of certain genres and ratings of movies changed through time.
+                Hover over each data point on the graph to see the movie title, the release date, and the gross."),
               plotlyOutput("scatter_plot")),
           ))
 

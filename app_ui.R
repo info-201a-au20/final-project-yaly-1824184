@@ -118,7 +118,7 @@ page_two <-
         Disney movies were the highest grossing films throughout time. Also,
         notice how the quantity of certain genres and ratings of movies
         changed through time. Hover over each data point on the graph to
-        see the movie title, the release date, and the gross."),
+        see the movie title, the release date, rating, and the gross."),
         plotlyOutput("scatter_plot")
       ),
     )
